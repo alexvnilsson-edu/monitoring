@@ -5,5 +5,5 @@ from sensors import cpu
 
 database = Database()
 
-temperature=cpu.temperature()
+temperature=cpu.get_cpu_temp()
 database.log_entry(temperature)
