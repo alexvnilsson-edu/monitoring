@@ -6,4 +6,4 @@ MAIN="$SCRIPTPATH/main.py"
 
 LOG_DIR=/var/log/monitoring
 
-$python $MAIN 1>>$LOG_DIR/monitoring.log 2>>$LOG_DIR/error.log
+$python $MAIN 2>>$LOG_DIR/error.log
