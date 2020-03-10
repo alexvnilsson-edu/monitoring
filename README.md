@@ -16,9 +16,17 @@ Om *monitoring*-användaren inte finns, skapa (med hemkatalog):
 
 `sudo useradd --system --create-home monitoring`
 
-## Databaskonfiguration
+## Konfiguration
 
-### Användare
+### Schemaläggning
+
+1. Logga in som användaren som ska köra skriptet
+  `sudo su - [user]`
+2. Starta crontab `crontab -e`
+3. Lägg till en rad för skriptet
+    `*/30 * * * * /bin/bash -c "/opt/monitoring/run.sh"` # Kör skriptet var 30:e minut
+
+### Databas-användare
 
 Skapa en fil med namnet `.pgpass` i hemkatalogen för användaren som ska köra skriptet.
 
