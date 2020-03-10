@@ -5,9 +5,7 @@ class Database:
     """En abstrakt klass för databas-anslutning och -kommandon."""
 
     def __init__(self):
-        # Anslut till databasen daodao1a som användaren postgres.
-        # Se /home/[user]/.pgpass för att sätta lösenord för användare.
-        # .pgpass måste ha rättigheterna 600 (chmod 600 ~/.pgpass).
+        """Inititera databas-anslutning."""
         self.connection = psycopg2.connect("host=localhost dbname=daodao1a user=monitoring")
         self.cursor = self.connection.cursor()
 
