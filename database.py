@@ -2,7 +2,7 @@ from datetime import datetime
 import psycopg2
 
 class Database:
-    """En abstrakt klass för databas-anslutning och -kommandon."""
+    """En klass för databas-anslutning och -kommandon."""
 
     def __init__(self):
         """Inititera databas-anslutning."""
